@@ -1,0 +1,21 @@
+<section class="mt-5">
+  <div class="card text-center ">
+    <div class="card-header">
+      Featured
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"> {{articles.Title}} </h5>
+      <div class="mb-5 text-center">
+        <img class=" rounded" [src]="'http://127.0.0.1:3000/getimage/' + articles.Image" alt="Image" width="350" height="350">
+      </div>
+      <p class="card-text">{{articles.Description}}</p>
+      <div class="content text-center" [innerHTML]="articles.Content"> <!-- pour affecter un code html car ce contenu s'affiche comme une balise html -->
+
+      </div>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+    <div class="card-footer text-muted">
+      {{articles.Date |date}}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,58 @@
+<section class="vh-100  mt-5" style="margin-bottom: 20%;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 d-none d-md-block">
+              <img src="assets/assets/images/loog.jpg" alt="register form" class="img-fluid mt-5" style="border-radius: 1rem;" />
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+              <div class="card-body p-5 text-black">
+                <form>
+                  <h2 class="text-center mb-3" style="font-family: Ink free;">Create account</h2>
+                  
+                  
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.Name" name="name" type="text" class="form-control" placeholder="Name" required>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.LastName" name="lastname" type="text" class="form-control" placeholder="Last Name" required>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.Email" name="email" type="email" class="form-control" placeholder="Email" required>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.Password" name="password" type="password" class="form-control" placeholder="Password" required>
+                  </div>
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.Mobile" name="mobile" type="text" class="form-control" placeholder="Mobile" required>
+                  </div>
+                  <div class="mb-4">
+                    <input [(ngModel)]="user.Adresse" name="adresse" type="text" class="form-control" placeholder="Adresse" required>
+                  </div>
+                  
+                  <div class="mb-4">
+                    <input type="file" (change)="select($event)" class="form-control" placeholder="Image">
+                  </div>
+                  
+                  <!-- Field "About" displayed only for authors -->
+                  <div class="mb-4" >
+                    <textarea [(ngModel)]="user.About" name="about" cols="30" rows="4" placeholder="About" class="form-control"></textarea>
+                  </div>
+                  
+                  <div class="pt-1 mb-4">
+                    <button (click)="register()" class="btn btn-dark btn-lg btn-block" type="button">Register</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

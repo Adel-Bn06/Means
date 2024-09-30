@@ -1,0 +1,56 @@
+<div class="container mt-5 p-4 ">
+
+    <h2 class="text-center mb-4 " style="color: #7dcea0;">Create Article</h2>
+  
+    <div class="col-8 mx-auto">
+  
+      <!-- Title Input with validation -->
+      <div class="form-group">
+        <input [(ngModel)]="article.Title"
+               type="text" 
+               class="form-control form-control-lg rounded-pill border-secondary shadow-sm"
+               placeholder="Enter the title" 
+               required>
+      </div>
+
+  
+      <!-- Image Upload with preview -->
+      <div class="my-3">
+        <input type="file" 
+               (change)="select($event)"
+               class="form-control-file" 
+               id="customFile" 
+               accept="image/*">
+        <div *ngIf="imagePreview" class="mt-2">
+          <img [src]="imagePreview" 
+               alt="Selected image" 
+               class="img-fluid rounded shadow-sm" 
+               style="max-height: 200px;">
+        </div>
+      </div>
+  
+      <!-- Description Input -->
+      <div class="form-group mb-3">
+        <textarea [(ngModel)]="article.Description"
+                  class="form-control border-secondary rounded-lg shadow-sm" 
+                  placeholder="Enter description"
+                  rows="3"></textarea>
+      </div>
+  
+      <!-- Content Input -->
+      <div class="form-group mb-3">
+        <textarea [(ngModel)]="article.Content" 
+                  class="form-control border-secondary rounded-lg shadow-sm"
+                  placeholder="Enter the content" 
+                  rows="5"></textarea>
+      </div>
+  
+      <!-- Submit Button -->
+      <button (click)="create()"
+              class="btn btn-lg btn-block rounded-pill shadow-sm " style="background-color: #7dcea0 ;">
+        Create Article
+      </button>
+  
+    </div>
+  </div>
+  

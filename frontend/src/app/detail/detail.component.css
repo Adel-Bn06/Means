@@ -1,0 +1,47 @@
+/* Product Section Styles */
+.section-sm {
+    padding: 60px 0;
+  }
+  
+  .post-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .card-meta {
+    font-size: 0.875rem;
+    color: #6c757d;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post-content-block {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .content {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .post-meta-tag .list-inline-item a {
+    background-color: #ffffff;
+    color: #007bff;
+    border: 1px solid #007bff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .post-meta-tag .list-inline-item a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+  }
+  

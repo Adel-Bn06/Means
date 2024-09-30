@@ -1,0 +1,63 @@
+<div class="header-height-fix"></div>
+<header class="header-nav">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <!-- logo -->
+          <a class="navbar-brand font-weight-bold mb-0" [routerLink]="['/home']" title="stickyny">
+            <img class="img-fluid" width="110" height="35" src="assets/assets/images/sticky.png" alt="Sticky">
+          </a>
+
+         
+
+          <!-- Navbar Toggler -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="ti ti-menu-2 d-inline"></i>
+            <i class="ti ti-x d-none"></i>
+          </button>
+
+          <!-- Navbar Links -->
+          <div class="collapse navbar-collapse" id="navHeader">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['/home']">Home</a>
+              </li>
+
+              <!-- Orders Link -->
+              <li class="nav-item" *ngIf="userservice.isloggedin()">
+                <a class="nav-link" [routerLink]="['/orders']">Orders</a>
+              </li>
+
+              <!-- Place an order Link -->
+              <li class="nav-item" *ngIf="!userservice.isloggedin()">
+                <a class="nav-link" [routerLink]="['/contact']">Place an Order</a>
+              </li>
+
+              <!-- My Account Link -->
+              <li class="nav-item" *ngIf="userservice.isloggedin()">
+                  <a class="nav-link" [routerLink]="['/user', userservice.getUserFromToken()._id]">My account</a>
+                
+              </li>
+
+              <!-- Register Link -->
+              <li class="nav-item" *ngIf="!userservice.isloggedin()">
+                <a class="nav-link" [routerLink]="['/register']">Register</a>
+              </li>
+
+              <!-- Login Link -->
+              <li class="nav-item" *ngIf="!userservice.isloggedin()">
+                <a class="nav-link" [routerLink]="['/login']">Login</a>
+              </li>
+
+              <!-- Logout Link -->
+              <li class="nav-item" *ngIf="userservice.isloggedin()">
+                <a class="nav-link" (click)="logout()">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
